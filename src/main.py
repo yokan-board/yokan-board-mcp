@@ -15,6 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+import sys
 import logging
 import httpx
 import uuid
@@ -624,9 +625,12 @@ async def delete_task(
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     logging.info(f"Yokan API Base URL: {get_settings().yokan_api_base_url}")
-    app_instance.run(
-        transport="streamable-http",
-        host="0.0.0.0",
-        port=8888,
-        path="/mcp",
-    )
+    if "--stdio" in sys.argv:
+        app_instance.run(transport="stdio")
+    else:
+        app_instance.run(
+            transport="streamable-http",
+            host="0.0.0.0",
+            port=8888,
+            path="/mcp",
+        )

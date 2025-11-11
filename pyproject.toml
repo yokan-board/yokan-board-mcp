@@ -1,0 +1,24 @@
+[project]
+name = "yokan-board-mcp"
+version = "0.1.0"
+dependencies = [
+    "uvicorn[standard]>=0.38.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov=src --cov-report=term-missing --cov-report=xml"
+testpaths = [
+    "src",
+]
+
+[dependency-groups]
+dev = [
+    "fastmcp>=2.13.0.2",
+    "httpx>=0.28.1",
+    "uvicorn[standard]>=0.38.0",
+]

@@ -1,0 +1,8 @@
+services:
+    yokan-mcp-server:
+        image: yokanboard/yokan-mcp
+        container_name: yokan-mcp
+        ports:
+            - "8888:8888"
+        environment:
+            YOKAN_API_BASE_URL: http://[YOUR_YOKAN_API_HOST]:3001/api

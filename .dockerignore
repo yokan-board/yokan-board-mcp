@@ -1,0 +1,26 @@
+# Ignore Git-related files
+.git/
+
+# Ignore virtual environment
+.venv/
+
+# Ignore Python cache and build artifacts
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Ignore environment variables file
+.env
+
+# Ignore dependency lock file
+uv.lock
+
+# Ignore test coverage report
+coverage.xml
+
+# Ignore documentation and project files not needed in the image
+GEMINI.md
+README.md
+Makefile
+pyproject.toml
+docs/

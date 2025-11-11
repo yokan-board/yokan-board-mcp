@@ -6,6 +6,8 @@
 
 This project is a Model Context Protocol (MCP) server for the Yokan Kanban Board API. It provides a tool-based interface for AI agents to interact with and manage Kanban boards, columns, and tasks.
 
+![](./images/yokan-board-mcp-on-gemini-01.png)
+
 ## Features
 
 -   **Board Management:** Create, retrieve, update, and delete Kanban boards.

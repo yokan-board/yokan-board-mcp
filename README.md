@@ -42,7 +42,9 @@ For new users or those who want to run the server without setting up a developme
 
     Make sure to replace `http://your-yokan-api-host:port/api` with the actual URL of your Yokan API instance.
 
-### Configuring Gemini CLI
+### MCP Clients Configuration
+
+#### Gemini CLI with the Streamable Transport
 
 Create `.gemini/settings.json` with the following content:
 
@@ -55,6 +57,29 @@ Create `.gemini/settings.json` with the following content:
                 "Authorization": "Bearer [TOKEN]",
                 "accept": "application/json"
             }
+        }
+    }
+}
+```
+
+#### VS Code Copilot with the Stdio Transport
+
+Create `.vscode/mcp.json` file with the following content:
+
+```json
+{
+    "servers": {
+        "yokan-board-mcp": {
+            "type": "stdio",
+            "command": "uv",
+            "args": [
+                "run",
+                "--directory",
+                "/full/path/to/github-repo-for-yokan-board/yokan-board-mcp",
+                "-m",
+                "src.main",
+                "--stdio"
+            ]
         }
     }
 }

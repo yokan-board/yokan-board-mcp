@@ -24,6 +24,8 @@ This project is a Model Context Protocol (MCP) server for the Yokan Kanban Board
 
 ## Getting Started
 
+### Building and Running Docker Image
+
 For new users or those who want to run the server without setting up a development environment, we recommend using Docker.
 
 1.  **Build the Docker image:**
@@ -40,6 +42,24 @@ For new users or those who want to run the server without setting up a developme
 
     Make sure to replace `http://your-yokan-api-host:port/api` with the actual URL of your Yokan API instance.
 
+### Configuring Gemini CLI
+
+Create `.gemini/settings.json` with the following content:
+
+```json
+{
+    "mcpServers": {
+        "yokan-board": {
+            "httpUrl": "http://[your-yokan-mcp-host]:8888/mcp",
+            "headers": {
+                "Authorization": "Bearer [TOKEN]",
+                "accept": "application/json"
+            }
+        }
+    }
+}
+```
+
 ## Development
 
 ### Prerequisites
@@ -52,7 +72,7 @@ For new users or those who want to run the server without setting up a developme
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/yokan-board/yokan-board-mcp.git
     cd yokan-board-mcp
     ```
 

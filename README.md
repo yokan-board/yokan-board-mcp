@@ -158,7 +158,7 @@ Yokan Board MCP is created by: **Julian I. Kamil**
 
 ## License
 
-Yokan is available under a dual license:
+Yokan Board MCP is available under a dual license:
 
 - **AGPLv3**: Free to use, modify, and distribute under the terms of the GNU Affero General Public License Version 3 (see [LICENSE.AGPLv3](LICENSE.AGPLv3))
 - **Commercial License**: Available for organizations that wish to use Yokan without AGPLv3's copyleft requirements (see [LICENSE.COMMERCIAL](LICENSE.COMMERCIAL))

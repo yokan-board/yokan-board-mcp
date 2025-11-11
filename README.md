@@ -69,7 +69,7 @@ Create `.vscode/mcp.json` file with the following content:
 ```json
 {
     "servers": {
-        "yokan-board-mcp": {
+        "yokan-board": {
             "type": "stdio",
             "command": "uv",
             "args": [

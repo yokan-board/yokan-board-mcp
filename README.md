@@ -75,7 +75,7 @@ Create `.vscode/mcp.json` file with the following content:
             "args": [
                 "run",
                 "--directory",
-                "/full/path/to/github-repo-for-yokan-board/yokan-board-mcp",
+                "/full/path/to/yokan-board-mcp-project-folder/yokan-board-mcp",
                 "-m",
                 "src.main",
                 "--stdio"
